@@ -1,0 +1,226 @@
+/* ------------------- Header ------------------------- */
+
+.header {
+    width: 100%;
+
+    font-size: 18px;
+    background-color: cadetblue;
+}
+
+.header_fixed {
+    position: fixed;
+    top: 0;
+}
+
+.header__categories-page {
+    padding: 25px 0;
+
+    display: flex;
+    justify-content: space-between;
+    column-gap: 20px;
+}
+
+.header__logo {
+    width: 166px;
+    height: 62px;
+
+    background: url('../assets/svg/art-quiz-logo-navigation.svg');
+}
+
+
+/* ------------------- Navigation ------------------------- */
+
+.header__navigation {
+    display: none;
+}
+
+.navigation {
+    display: flex;
+    justify-content: space-between;
+    column-gap: 40px;
+}
+
+.navigation-bar {
+    width: 100%;
+    height: 80px;
+
+    background-color: cadetblue;
+    border: 1px solid white;
+    border-radius: 20px 20px 0px 0px;
+
+    filter: drop-shadow(0px -10px 50px rgb(0, 0, 0));
+    /* filter: drop-shadow(0px -10px 50px rgba(0, 0, 0, 0.8)); */
+}
+
+.navigation-bar_fixed {
+    position: fixed;
+    bottom: 0;
+}
+
+.navigation-bar__content {
+    padding: 16px 45px;
+}
+
+/* ------------------- Categories-page ------------------------- */
+.categories-page {
+    height: 100%;
+    min-height: 100vh;
+    padding-top: 112px;
+    padding-bottom: 80px;
+}
+
+.categories-page__content {
+    padding: 20px 0;
+    height: 100%;
+}
+
+.categories-page__header {
+    margin-bottom: 50px;
+
+    font-size: 24px;
+}
+
+
+.category-card-item__header{
+    margin-bottom: 10px;
+
+    display: flex;
+    justify-content: space-between;
+}
+
+
+.categories-cards {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+
+    gap: 20px;
+}
+
+.category-card-item__image {
+    width: 155px;
+    height: 164px;
+    
+    /* background-color:crimson; */
+    background-color:#f5bda8;
+    border-radius: 20px;
+}
+
+/* ------------------- Footer ------------------------- */
+.footer_fixed {
+    position: fixed;
+    bottom: 0;
+}
+
+.footer-categories {
+    width: 100%;
+    display: none;
+
+    background-color: darkcyan;
+    filter: drop-shadow(0px -10px 50px rgb(0, 0, 0));
+}
+
+.footer-info {
+    width: 100%;
+    height: 45px;
+    padding: 10px 0;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.footer-info__rsschool-logo {
+    width: 61px;
+    height: 23px;
+
+    background: url('../assets/svg/rsschool-logo.svg') no-repeat;
+}
+
+
+/* ------------------- Media Queries ------------------------- */
+
+@media (min-width: 521px) {
+
+    .categories-page {
+        padding-top: 142px;
+        padding-bottom: 80px;
+    }
+
+    .category-card-item {
+        font-size: 20px;
+    }
+
+    .container {
+        padding: 0 35px;
+    }
+
+    .header__categories-page {
+        padding: 40px 0;
+
+        align-items: center;
+    }
+
+    .footer-info {
+        height: 80px;
+
+        justify-content:flex-end;
+        gap: 0 60px;
+    }
+
+    .footer-info__rsschool-logo {
+        margin-right: auto;
+    }
+}
+
+@media (min-width: 768px) {
+
+    .header__navigation {
+        display: flex;
+    }
+
+    .footer-categories {
+        display: block;
+    }
+
+    .navigation-bar {
+        display: none;
+    }
+}
+
+@media(min-width: 1025px) {
+
+    .container {
+        padding: 0 40px;
+    }
+
+    .header {
+        font-size: 22px;
+    }
+
+    .header__navigation {
+        margin-right: auto;
+    }
+
+    .header__categories-page {
+        column-gap: 120px;
+    }
+
+    .header__categories-page {
+        padding: 30px 0;
+    }
+
+    .categories-page {
+        padding-top: 122px;
+        padding-bottom: 80px;
+    }
+
+    .categories-page__content {
+        padding-top: 100px;
+    }
+
+    .categories-page__header {
+        display: none;
+    }
+}
+

@@ -1,0 +1,205 @@
+body {
+    width: 100%;
+    /* width: 100vw; */
+    min-height: 100vh;
+    margin: 0;
+
+    /* display: flex;
+    flex-direction: column; */
+
+    background-color: rgb(0, 0, 0);
+    
+    font-size: 16px;
+    font-family: Arial, Helvetica, sans-serif;
+    color: white;
+}
+
+*,
+*::after,
+*::before {
+    box-sizing: border-box;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    padding: 0;
+    margin: 0;
+}
+
+p {
+    padding: 0;
+    margin: 0;
+}
+
+ul, ol {
+    padding: 0;
+    margin: 0;
+    list-style-type: none;
+}
+
+img {
+    display: block;
+    width: 100%;
+    height: auto;
+}
+
+input {
+    padding: 0;
+    margin: 0;
+    border: 0;
+    border: none;
+}
+
+input[type="number"]::-webkit-outer-spin-button,
+input[type="number"]::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+/* ------------------- Main ------------------------- */
+
+
+.main {
+    width: 100%;
+    height: 100%;
+}
+
+.start, .settings, .questions, .results {
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    justify-content: space-between;
+}
+
+.categories {
+    height: 100%;
+    min-height: 100vh;
+}
+
+.container {
+    width: 100%;
+    height: 100%;
+    margin: 0 auto;
+    padding: 0 15px;
+}
+
+/* ------------------- Buttons ------------------------- */
+
+.button {
+    padding: 0;
+    display: inline-block;
+
+    font-size: 16px;
+    font-family: Arial, Helvetica, sans-serif;
+    color: white;
+
+    background-color: transparent;
+    border: none;
+
+    cursor: pointer;
+}
+
+.button_basic {
+    border: 1px solid #FFFFFF;
+    border-radius: 56px;
+}
+
+.button_circle {
+    border-radius: 50%;
+    background-color: transparent;
+}
+
+.button_circle_plus {
+    width: 33px;
+    height: 33px;
+
+    background: url('../assets/svg/button-plus.svg') no-repeat;
+}
+
+.button_circle_plus:hover {
+    background: url('../assets/svg/button-plus-hover.svg') no-repeat;
+}
+
+.button_circle_minus {
+    width: 33px;
+    height: 33px;
+
+    background: url('../assets/svg/button-minus.svg') no-repeat;
+}
+
+.button_circle_minus:hover {
+    background: url('../assets/svg/button-minus-hover.svg') no-repeat;
+}
+
+.button_mute {
+    width: 23px;
+    height: 16px;
+
+    background: url('../assets/svg/volume-mute.svg') no-repeat;
+}
+
+.button_sound {
+    width: 23px;
+    height: 16px;
+
+    background: url('../assets/svg/volume-mute.svg') no-repeat;
+}
+
+.button_settings {
+    width: 34px;
+    height: 34px;
+
+    background: url('../assets/svg/carbon_settings.svg') no-repeat;
+    vertical-align: middle; 
+}
+
+.button_settings:hover {
+    background: url('../assets/svg/carbon_settings-hover.svg') no-repeat;
+}
+
+.button_exit {
+    width: 36px;
+    height: 36px;
+
+    background: url('../assets/svg/button-exit.svg') no-repeat;
+    background-position: 50% 50%;
+}
+
+.button_exit:hover {
+    background: url('../assets/svg/button-exit-hover.svg') no-repeat;
+    background-position: 50% 50%;
+}
+
+.button_home {
+    width: 31px;
+    height: 48px;
+
+    background: url('../assets/svg/home-button.svg') no-repeat;
+}
+
+.button_home:hover {
+    background: url('../assets/svg/home-button-active.svg') no-repeat;
+}
+
+.button_categories {
+    width: 58px;
+    height: 48px;
+
+    background: url('../assets/svg/categories-button.svg') no-repeat;
+}
+
+.button_categories:hover {
+    background: url('../assets/svg/categories-button-active.svg') no-repeat;
+}
+
+.button_score {
+    width: 30px;
+    height: 48px;
+
+    background: url('../assets/svg/score-button.svg') no-repeat;
+}
+
+.button_score:hover {
+    background: url('../assets/svg/score-button-active.svg') no-repeat;
+}

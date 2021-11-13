@@ -1,0 +1,157 @@
+/* ------------------- Header ------------------------- */
+
+.header {
+    width: 100%;
+}
+
+.header__start-page {
+    padding: 25px 0;
+
+    text-align: end;
+}
+
+
+/* ------------------- Start-page ------------------------- */
+
+.start {
+    justify-content: space-between;
+    background: url('../assets/img/j-retrato-de-cardenal-rafael.png') no-repeat;
+    background-size: cover;
+    background-position: 50% 0%;
+}
+
+.start-page {
+    height: 100%;
+}
+
+.start-page__content {
+    min-width: 270px;
+    width: 100%;
+    height: 100%;
+    margin: auto;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-end;
+}
+
+.start-page__logo {
+    width: 166px;
+    height: 62px;
+    margin-bottom: 35px;
+
+    background: url('../assets/svg/art-quiz-logo.svg') no-repeat;
+}
+
+.start-page__button-group {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+}
+
+.start-page__button {
+    width: 270px;
+    height: 55px;
+    margin-bottom: 20px;
+}
+
+.start-page__button:last-child {
+    margin-bottom: 40px;
+}
+
+/* ------------------- Footer ------------------------- */
+
+.footer {
+    width: 100%;
+    /* height: 45px; */
+    /* margin-top: auto; */
+
+    filter: drop-shadow(0px -10px 50px rgb(0, 0, 0));
+}
+
+.footer-info {
+    width: 100%;
+    /* height: 100%; */
+    height: 45px;
+    padding: 10px 0;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.footer-info__rsschool-logo {
+    width: 61px;
+    height: 23px;
+
+    background: url('../assets/svg/rsschool-logo.svg') no-repeat;
+}
+
+
+/* ------------------- Media Queries ------------------------- */
+
+@media (min-width: 521px) {
+
+    .container {
+        padding: 0 35px;
+    }
+
+    .header__start-page {
+        padding: 35px 0;
+    }
+
+    .start-page__content {
+        max-width: 322px;
+        /* min-width: 322px; */
+
+        justify-content: center;
+    }
+
+    .start-page__logo {
+        width: 322px;
+        height: 120px;
+        margin-bottom: 120px;
+        background-size: 322px 120px;
+    }
+
+    .footer-info {
+        height: 80px;
+
+        justify-content:flex-end;
+        gap: 0 60px;
+    }
+
+    .footer-info__rsschool-logo {
+        margin-right: auto;
+    }
+}
+
+@media(min-width: 1025px) {
+
+    .container {
+        padding: 0 40px;
+    }
+
+    .header__start-page {
+        padding: 70px 0;
+    }
+
+    .start-page__content {
+        max-width: 615px;
+        /* min-width: 615px; */
+    }
+
+    .start-page__logo {
+        width: 440px;
+        height: 165px;
+        margin-bottom: 170px;
+
+        background-size: 440px 165px;
+    }
+
+    .start-page__button-group {
+        flex-direction: row;
+        gap: 40px;
+    }
+}

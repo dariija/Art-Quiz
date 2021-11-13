@@ -1,0 +1,208 @@
+/* ------------------- Header ------------------------- */
+
+.header {
+    width: 100%;
+}
+
+.header__settings-page {
+    padding: 25px 0;
+
+    text-align: end;
+    /* ????????????????? */
+}
+
+.header__settings-page{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    font-size: 24px;
+}
+
+/* ------------------- Settings-page ------------------------- */
+.settings-page {
+    height: 100%;
+}
+
+.settings-page__options {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    row-gap: 40px;
+}
+
+.settings-page__content {
+    padding: 20px 0;
+
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    row-gap: 50px;
+}
+
+.settings-page__options-header {
+    margin-bottom: 20px;
+
+    font-weight: 700;
+    font-size: 30px;
+    text-align: center;
+}
+
+.settings-page__button-group{
+    margin-top: auto;
+
+    display: flex;
+    justify-content: space-between;
+    column-gap: 30px;
+}
+
+.settings-page__button {
+    width: 100%;
+    max-width: 156px;
+    height: 56px;
+
+    font-size: 24px;
+}
+
+.volume-settings {
+    width: 100%;
+}
+
+.volume-settings__range {
+    width: 100%;
+}
+
+.volume-setting__button-group {
+    display: flex;
+    justify-content: space-between;
+}
+
+.time-answer-settings__time-group {
+    max-width: 150px;
+    margin: auto;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.time-answer-settings__time {
+    width: 30px;
+    height: 30px;
+
+    text-align: center;
+    font-size: 24px;
+    color: white;
+
+    background: transparent;
+}
+
+
+/* ------------------- Footer ------------------------- */
+
+.footer {
+    width: 100%;
+    /* height: 45px; */
+    /* margin-top: auto; */
+}
+
+.footer-info {
+    width: 100%;
+    /* height: 100%; */
+    height: 45px;
+    padding: 10px 0;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.footer-info__rsschool-logo {
+    width: 61px;
+    height: 23px;
+
+    background: url('../assets/svg/rsschool-logo.svg') no-repeat;
+}
+
+
+/* ------------------- Media Queries ------------------------- */
+
+@media (min-width: 521px) {
+
+    .container {
+        padding: 0 35px;
+    }
+
+    .header__settings-page {
+        padding: 35px 0;
+    }
+
+    .settings-page__content {
+        padding: 65px 55px;
+    }
+
+    .settings-page__options {
+        align-items: flex-start;
+        row-gap: 60px;
+    }
+
+    .settings-page__options-header {
+        margin-bottom: 40px;
+
+        text-align: left;
+    }
+
+    .time-answer-settings__time-group {
+        margin: 0;
+    }
+
+    .settings-page__button {
+        max-width: 280px;
+        height: 56px;
+    }
+
+    .footer-info {
+        height: 80px;
+
+        justify-content:flex-end;
+        gap: 0 60px;
+    }
+
+    .footer-info__rsschool-logo {
+        margin-right: auto;
+    }
+}
+
+@media(min-width: 1025px) {
+
+    .container {
+        padding: 0 40px;
+    }
+
+    .header__settings-page{
+        padding: 45px 0;
+    }
+
+    .settings-page__content {
+        /* flex-direction: row;
+        column-gap: 190Px; */
+        /* padding: 80px 65px 50px; */
+        padding: 55px 40px 20px;
+    }
+
+    .settings-page__options {
+        width: 100%;
+        max-width: 500px;
+    }
+
+    .settings-page__button-group {
+        width: 100%;
+        max-width: 600px;
+        align-self: flex-end;
+    }
+
+    .settings-page__options-header {
+        font-size: 34px;
+    }
+}
+
