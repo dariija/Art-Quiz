@@ -7,7 +7,8 @@ body {
     /* display: flex;
     flex-direction: column; */
 
-    background-color: rgb(0, 0, 0);
+    /* background-color: rgb(0, 0, 0); */
+    background-color: rgb(206, 16, 63);
     
     font-size: 16px;
     font-family: Arial, Helvetica, sans-serif;
@@ -57,13 +58,16 @@ input[type="number"]::-webkit-inner-spin-button {
 
 /* ------------------- Main ------------------------- */
 
+.body_hidden {
+    overflow: hidden;
+}
 
 .main {
     width: 100%;
     height: 100%;
 }
 
-.start, .settings, .questions, .results {
+.start, .settings, .questions {
     height: 100vh;
     display: flex;
     flex-direction: column;
@@ -72,7 +76,7 @@ input[type="number"]::-webkit-inner-spin-button {
     justify-content: space-between;
 }
 
-.categories {
+.categories, .results {
     height: 100%;
     min-height: 100vh;
 }
@@ -98,11 +102,33 @@ input[type="number"]::-webkit-inner-spin-button {
     border: none;
 
     cursor: pointer;
+    transition: linear 0.2s;
+}
+
+.button:hover {
+    background-color: #FFBCA2;
 }
 
 .button_basic {
     border: 1px solid #FFFFFF;
     border-radius: 56px;
+}
+
+.button_basic_dark {
+    border: 1px solid #000000;
+    color: rgb(0, 0, 0);
+}
+
+.button_basic_dark:hover {
+    background-color: #00000050;
+}
+
+.button_pink {
+    background-color: #FFBCA2;
+}
+
+.button_pink:hover  {
+    background-color: #eb926f;
 }
 
 .button_circle {
@@ -168,6 +194,11 @@ input[type="number"]::-webkit-inner-spin-button {
 
 .button_exit:hover {
     background: url('../assets/svg/button-exit-hover.svg') no-repeat;
+    background-position: 50% 50%;
+}
+
+.button_exit_dark {
+    background: url('../assets/svg/button-exit-dark.svg') no-repeat;
     background-position: 50% 50%;
 }
 
