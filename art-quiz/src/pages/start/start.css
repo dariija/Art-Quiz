@@ -15,7 +15,7 @@
 
 .start {
     justify-content: space-between;
-    background: url('../assets/img/j-retrato-de-cardenal-rafael.png') no-repeat;
+    background: url('../../assets/img/j-retrato-de-cardenal-rafael.png') no-repeat;
     background-size: cover;
     background-position: 50% 0%;
 }
@@ -41,7 +41,7 @@
     height: 62px;
     margin-bottom: 35px;
 
-    background: url('../assets/svg/art-quiz-logo.svg') no-repeat;
+    background: url('../../assets/svg/art-quiz-logo.svg') no-repeat;
 }
 
 .start-page__button-group {
@@ -85,7 +85,7 @@
     width: 61px;
     height: 23px;
 
-    background: url('../assets/svg/rsschool-logo.svg') no-repeat;
+    background: url('../../assets/svg/rsschool-logo.svg') no-repeat;
 }
 
 

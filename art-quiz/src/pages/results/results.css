@@ -1,18 +1,6 @@
 /* ------------------- Header ------------------------- */
 
-.header {
-    width: 100%;
-
-    font-size: 18px;
-    background-color: cadetblue;
-}
-
-.header_fixed {
-    position: fixed;
-    top: 0;
-}
-
-.header__categories-page {
+.header__results-page {
     padding: 25px 0;
 
     display: flex;
@@ -20,76 +8,38 @@
     column-gap: 20px;
 }
 
-.header__logo {
-    width: 166px;
-    height: 62px;
-
-    background: url('../assets/svg/art-quiz-logo-navigation.svg');
+.navigation__link_active {
+    color: #FFBCA2;
 }
 
-
-/* ------------------- Navigation ------------------------- */
-
-.header__navigation {
-    display: none;
+.navigation__link:active {
+    color: #FFBCA2;
 }
 
-.navigation {
-    display: flex;
-    justify-content: space-between;
-    column-gap: 40px;
-}
-
-.navigation-bar {
-    width: 100%;
-    height: 80px;
-
-    background-color: cadetblue;
-    border: 1px solid white;
-    border-radius: 20px 20px 0px 0px;
-
-    filter: drop-shadow(0px -10px 50px rgb(0, 0, 0));
-    /* filter: drop-shadow(0px -10px 50px rgba(0, 0, 0, 0.8)); */
-}
-
-.navigation-bar_fixed {
-    position: fixed;
-    bottom: 0;
-}
-
-.navigation-bar__content {
-    padding: 16px 45px;
+.navigation__link:hover {
+    color: #FFBCA2;
 }
 
 /* ------------------- Categories-page ------------------------- */
-.categories-page {
+.results-page {
     height: 100%;
     min-height: 100vh;
     padding-top: 112px;
     padding-bottom: 80px;
 }
 
-.categories-page__content {
+.results-page__content {
     padding: 20px 0;
     height: 100%;
 }
 
-.categories-page__header {
+.results-page__header {
     margin-bottom: 50px;
 
     font-size: 24px;
 }
 
-
-.category-card-item__header{
-    margin-bottom: 10px;
-
-    display: flex;
-    justify-content: space-between;
-}
-
-
-.categories-cards {
+.results-cards {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
@@ -98,7 +48,7 @@
     gap: 20px;
 }
 
-.category-card-item__image {
+.result-card-item__image {
     width: 155px;
     height: 164px;
     
@@ -107,13 +57,22 @@
     border-radius: 20px;
 }
 
+
+/* .category-card-item__header{
+    margin-bottom: 10px;
+
+    display: flex;
+    justify-content: space-between;
+} */
+
+
 /* ------------------- Footer ------------------------- */
 .footer_fixed {
     position: fixed;
     bottom: 0;
 }
 
-.footer-categories {
+.footer-results {
     width: 100%;
     display: none;
 
@@ -121,29 +80,12 @@
     filter: drop-shadow(0px -10px 50px rgb(0, 0, 0));
 }
 
-.footer-info {
-    width: 100%;
-    height: 45px;
-    padding: 10px 0;
-
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-}
-
-.footer-info__rsschool-logo {
-    width: 61px;
-    height: 23px;
-
-    background: url('../assets/svg/rsschool-logo.svg') no-repeat;
-}
-
 
 /* ------------------- Media Queries ------------------------- */
 
 @media (min-width: 521px) {
 
-    .categories-page {
+    .results-page {
         padding-top: 142px;
         padding-bottom: 80px;
     }
@@ -152,21 +94,21 @@
         padding: 0 35px;
     }
 
-    .header__categories-page {
+    .header__results-page {
         padding: 40px 0;
 
         align-items: center;
     }
 
-    .categories-cards {
-        gap: 20px 25px;
+    .results-cards {
+        gap: 25px;
     }
 
-    .category-card-item {
+    /* .category-card-item {
         font-size: 20px;
-    }
+    } */
 
-    .category-card-item__image {
+    .result-card-item__image {
         width: 195px;
         height: 206px;
     }
@@ -189,7 +131,7 @@
         display: flex;
     }
 
-    .footer-categories {
+    .footer-results {
         display: block;
     }
 
@@ -212,25 +154,28 @@
         margin-right: auto;
     }
 
-    .header__categories-page {
+    .header__results-page {
         column-gap: 120px;
     }
 
-    .header__categories-page {
+    .header__results-page {
         padding: 30px 0;
     }
 
-    .categories-page {
+    .results-page {
         padding-top: 122px;
         padding-bottom: 80px;
     }
 
-    .categories-page__content {
+    .results-page__content {
         padding-top: 100px;
     }
 
-    .categories-page__header {
+    .results-page__header {
         display: none;
     }
-}
 
+    .results-cards {
+        gap: 45px 25px;
+    }
+}

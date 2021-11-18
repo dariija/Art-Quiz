@@ -1,3 +1,38 @@
+@font-face {
+    font-family: 'Gilroy';
+    src: url('../../assets/fonts/gilroy-regular.ttf') format('truetype');
+    font-weight: 400;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Gilroy';
+    src: url('../../assets/fonts/gilroy-regularitalic.ttf') format('truetype');
+    font-weight: 400;
+    font-style: italic;
+}
+
+@font-face {
+    font-family: 'Gilroy';
+    src: url('../../assets/fonts/gilroy-medium.ttf') format('truetype');
+    font-weight: 500;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Gilroy';
+    src: url('../../assets/fonts/gilroy-semibold.ttf') format('truetype');
+    font-weight: 600;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Gilroy';
+    src: url('../../assets/fonts/gilroy-bold.ttf') format('truetype');
+    font-weight: 700;
+    font-style: normal;
+}
+
 body {
     width: 100%;
     /* width: 100vw; */
@@ -7,11 +42,13 @@ body {
     /* display: flex;
     flex-direction: column; */
 
-    /* background-color: rgb(0, 0, 0); */
-    background-color: rgb(206, 16, 63);
+    background-color: rgb(0, 0, 0);
+    /* background-color: rgb(206, 16, 63); */
     
+    font-family: 'Gilroy', Arial, Helvetica, sans-serif;
     font-size: 16px;
-    font-family: Arial, Helvetica, sans-serif;
+    font-weight: 500;
+    font-style: normal;
     color: white;
 }
 
@@ -56,6 +93,15 @@ input[type="number"]::-webkit-inner-spin-button {
   margin: 0;
 }
 
+a  {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    text-decoration: none;
+    color: white;
+}
+
 /* ------------------- Main ------------------------- */
 
 .body_hidden {
@@ -92,10 +138,10 @@ input[type="number"]::-webkit-inner-spin-button {
 
 .button {
     padding: 0;
-    display: inline-block;
+    /* display: inline-block; */
 
     font-size: 16px;
-    font-family: Arial, Helvetica, sans-serif;
+    font-family: 'Gilroy', Arial, Helvetica, sans-serif;
     color: white;
 
     background-color: transparent;
@@ -105,13 +151,13 @@ input[type="number"]::-webkit-inner-spin-button {
     transition: linear 0.2s;
 }
 
-.button:hover {
-    background-color: #FFBCA2;
-}
-
 .button_basic {
     border: 1px solid #FFFFFF;
     border-radius: 56px;
+}
+
+.button_basic:hover {
+    background-color: #FFBCA2;
 }
 
 .button_basic_dark {
@@ -140,65 +186,65 @@ input[type="number"]::-webkit-inner-spin-button {
     width: 33px;
     height: 33px;
 
-    background: url('../assets/svg/button-plus.svg') no-repeat;
+    background: url('../../assets/svg/button-plus.svg') no-repeat;
 }
 
 .button_circle_plus:hover {
-    background: url('../assets/svg/button-plus-hover.svg') no-repeat;
+    background: url('../../assets/svg/button-plus-hover.svg') no-repeat;
 }
 
 .button_circle_minus {
     width: 33px;
     height: 33px;
 
-    background: url('../assets/svg/button-minus.svg') no-repeat;
+    background: url('../../assets/svg/button-minus.svg') no-repeat;
 }
 
 .button_circle_minus:hover {
-    background: url('../assets/svg/button-minus-hover.svg') no-repeat;
+    background: url('../../assets/svg/button-minus-hover.svg') no-repeat;
 }
 
 .button_mute {
     width: 23px;
     height: 16px;
 
-    background: url('../assets/svg/volume-mute.svg') no-repeat;
+    background: url('../../assets/svg/volume-mute.svg') no-repeat;
 }
 
 .button_sound {
     width: 23px;
     height: 16px;
 
-    background: url('../assets/svg/volume-mute.svg') no-repeat;
+    background: url('../../assets/svg/volume-mute.svg') no-repeat;
 }
 
 .button_settings {
     width: 34px;
     height: 34px;
 
-    background: url('../assets/svg/carbon_settings.svg') no-repeat;
-    vertical-align: middle; 
+    background: url('../../assets/svg/carbon_settings.svg') no-repeat;
+    /* vertical-align: middle;  */
 }
 
 .button_settings:hover {
-    background: url('../assets/svg/carbon_settings-hover.svg') no-repeat;
+    background: url('../../assets/svg/carbon_settings-hover.svg') no-repeat;
 }
 
 .button_exit {
     width: 36px;
     height: 36px;
 
-    background: url('../assets/svg/button-exit.svg') no-repeat;
+    background: url('../../assets/svg/button-exit.svg') no-repeat;
     background-position: 50% 50%;
 }
 
 .button_exit:hover {
-    background: url('../assets/svg/button-exit-hover.svg') no-repeat;
+    background: url('../../assets/svg/button-exit-hover.svg') no-repeat;
     background-position: 50% 50%;
 }
 
 .button_exit_dark {
-    background: url('../assets/svg/button-exit-dark.svg') no-repeat;
+    background: url('../../assets/svg/button-exit-dark.svg') no-repeat;
     background-position: 50% 50%;
 }
 
@@ -206,31 +252,31 @@ input[type="number"]::-webkit-inner-spin-button {
     width: 31px;
     height: 48px;
 
-    background: url('../assets/svg/home-button.svg') no-repeat;
+    background: url('../../assets/svg/home-button.svg') no-repeat;
 }
 
 .button_home:hover {
-    background: url('../assets/svg/home-button-active.svg') no-repeat;
+    background: url('../../assets/svg/home-button-active.svg') no-repeat;
 }
 
 .button_categories {
     width: 58px;
     height: 48px;
 
-    background: url('../assets/svg/categories-button.svg') no-repeat;
+    background: url('../../assets/svg/categories-button.svg') no-repeat;
 }
 
 .button_categories:hover {
-    background: url('../assets/svg/categories-button-active.svg') no-repeat;
+    background: url('../../assets/svg/categories-button-active.svg') no-repeat;
 }
 
 .button_score {
     width: 30px;
     height: 48px;
 
-    background: url('../assets/svg/score-button.svg') no-repeat;
+    background: url('../../assets/svg/score-button.svg') no-repeat;
 }
 
 .button_score:hover {
-    background: url('../assets/svg/score-button-active.svg') no-repeat;
+    background: url('../../assets/svg/score-button-active.svg') no-repeat;
 }
