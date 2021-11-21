@@ -1,0 +1,63 @@
+/* ------------------- Pictures-questions ------------------------- */
+
+.pictures-questions-cards {
+    margin: auto;
+    /* max-width: 330px; */
+
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+
+    gap: 20px;
+}
+
+.pictures-question-card-item__image {
+    width: 155px;
+    height: 164px;
+    
+    background-color:#f5bda8;
+    border-radius: 20px;
+}
+
+/* ------------------- Media Queries ------------------------- */
+
+@media (min-width: 521px) {
+   
+    .pictures-questions-cards {
+        width: 100%;
+        max-width: 670px;
+    }
+
+    .pictures-questions-cards {
+        gap: 25px;
+    }
+    
+}
+
+@media (min-width: 768px) {
+
+    .pictures-question-card-item__image {
+        width: 320px;
+        height: 307px;
+    }
+}
+
+@media(min-width: 1025px) {
+
+    .pictures-questions-cards {
+        max-width: 825px;
+    }
+
+    .pictures-question-card-item__image {
+        width: 400px;
+        height: 280px;
+    }
+}
+
+@media(min-width: 768px ) and (min-height: 400px) and (max-height: 700px) {
+
+    .pictures-question-card-item__image {
+        width: 155px;
+        height: 164px;
+    }
+}
