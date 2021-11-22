@@ -28,7 +28,7 @@ class PicturesQuestionItem {
 
             let pictureImage = document.createElement('div');
             pictureImage.classList.add("pictures-question-card-item__image");
-            pictureImage.style.backgroundImage = `url("../src/data-images/full/${shuffledAnswers[i].value}full.jpg")`;
+            pictureImage.style.backgroundImage = `url("./src/data-images/full/${shuffledAnswers[i].value}full.jpg")`;
 
             pictureCard.append(pictureImage);
             answersContainer.append(pictureCard);

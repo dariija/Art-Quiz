@@ -5,7 +5,7 @@ class ResultCardItem {
         this.container = document.createElement('div');
         this.container.classList.add('result-card-item');
 
-        this.cover = `url(../src/data-images/img/${cardInfo.imageNum}.jpg)`;
+        this.cover = `url(./src/data-images/img/${cardInfo.imageNum}.jpg)`;
         this.userAnswer = userAnswer;
         this.container.dataset.userAnswer = userAnswer;
         this.cardInfo = cardInfo;

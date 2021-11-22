@@ -7,7 +7,7 @@ class CategoryCardItem {
 
         this.categoryName = categoryName;
         this.rightAnswers = rightAnswersNum;
-        this.cover = `../src/data-images/img/${coverIndex}.jpg`;
+        this.cover = `./src/data-images/img/${coverIndex}.jpg`;
     }
 
     render() {
