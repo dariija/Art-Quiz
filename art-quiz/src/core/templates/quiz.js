@@ -8,6 +8,7 @@ import App from '../../pages/app/app.js';
 import ModalAnswer from '../modal-answer/modal-answer.js'
 import Button from '../button/button.js';
 import ModalResult from '../modal-result/modal-result.js';
+import QuestionsPage from '../../pages/questions/questions.js';
 
 function getDataByType(type) {
     const dataByType = [];
@@ -24,7 +25,9 @@ function getDataByType(type) {
 }
 
 class Quiz {
-    constructor(type) {
+
+    constructor(settings, type) {
+        this.settings = settings;
         this.type = type;
         this.data = getDataByType(this.type);
         this.categories = Category.divideDataByCategories(this.data);
@@ -32,14 +35,13 @@ class Quiz {
 
         this.currentCategoryGame;
         this.currentQuestion = 0;
-
-
-        // this.settings = new SettingsQuiz()
     }
 
     nextQuestion() {
         let modal = document.getElementById('modal_window');
         modal.remove();
+        if(this.settings.timer.enable) QuestionsPage.resetTimer(this);
+
         this.currentQuestion++;
         if (this.currentQuestion < this.questions[this.currentCategoryGame].length) {
             this.renderQuestion(this.questions[this.currentCategoryGame][this.currentQuestion])
@@ -53,6 +55,9 @@ class Quiz {
     }
 
     endQuiz() {
+        let sound = document.getElementById('result_sound');
+        if (this.settings.valueAsNumber) sound.play();
+
         let result = this.categories[this.currentCategoryGame].userAnswers.filter( answer => answer).length;
         this.categories[this.currentCategoryGame].results = result;
 
@@ -60,12 +65,14 @@ class Quiz {
         let modal = new ModalResult(result).render();
         container.append(modal);
 
-
         this.currentCategoryGame = '';
         this.currentQuestion = 0;
     }
 
     showRightAnswer(userAnswer) {
+        let sound = document.getElementById(`${userAnswer? 'right_answer_sound' : 'wrong_answer_sound'}`);
+        if (this.settings.valueAsNumber) sound.play();
+
         let fullAnswer = this.categories[this.currentCategoryGame].data[this.currentQuestion];
         let answer = new ModalAnswer(userAnswer, fullAnswer).render();
 
@@ -75,11 +82,20 @@ class Quiz {
 
         this.categories[this.currentCategoryGame].userAnswers.push(userAnswer)
     }
+
+    startTimer() {
+        let timerEl = document.getElementById('timer_time');
+        this.settings.timer.timerFunc = setInterval( () => timerEl.dataset.timerTime -= 1, 1000);
+    }
+
+    stopTimer() {
+        clearInterval(this.settings.timer.timerFunc)
+    }
 }
 
 class AuthorsQuiz extends Quiz {
-    constructor(type = 'authors') {
-        super(type)
+    constructor(settings, type = 'authors') {
+        super(settings, type)
     }
 
     renderQuestion(question) {
@@ -89,12 +105,14 @@ class AuthorsQuiz extends Quiz {
         let fullInfoQuestion = this.categories[this.currentCategoryGame].data[this.currentQuestion];
         let questionElement = new AuthorQuestionItem(question, fullInfoQuestion, this).render();
         container.append(questionElement);
+
+        if (this.settings.timer.enable) this.startTimer();
     }
 }
 
 class PicturesQuiz extends Quiz {
-    constructor(type = 'pictures') {
-        super(type)
+    constructor(settings, type = 'pictures') {
+        super(settings, type)
     }
 
     renderQuestion(question) {
@@ -104,6 +122,8 @@ class PicturesQuiz extends Quiz {
         let fullInfoQuestion = this.categories[this.currentCategoryGame].data[this.currentQuestion];
         let questionElement = new PicturesQuestionItem(question, fullInfoQuestion, this).render();
         container.append(questionElement);
+
+        if (this.settings.timer.enable) this.startTimer();
     }
 }
 

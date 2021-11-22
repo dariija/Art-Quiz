@@ -9,6 +9,7 @@ class Button {
     static enableShowAnswer(buttons, quiz) {
         [...buttons].forEach( button => {
             button.addEventListener('click', () => {
+                quiz.stopTimer();
                 button.dataset.answerCorrectness === 'true'? quiz.showRightAnswer(true) : quiz.showRightAnswer(false);
             })
         });
@@ -20,17 +21,6 @@ class Button {
             quiz.nextQuestion()
         })
     }
-
-    static enableEndQuiz(quiz) {
-        let button = document.getElementById('end_category_quiz');
-        button.addEventListener('click', () => {
-            // quiz.()
-        })
-    }
-
-    // static enableExitQuiz(quiz) {
-
-    // }
 
     render() {
         this.container.classList.add(...this.classes);

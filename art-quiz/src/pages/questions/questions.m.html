@@ -2,16 +2,28 @@
     <header class="header">
         <div class="container">
             <div class="header__content">
-                <div class="header__questions-page">
-                    <!-- <div class="timer">
-                        <a class="button button_exit" href="#categories"></a>
-                        <input class="timer__scale" type="range" min="0" max="30" value="15">
-                        <span class="timer__time">0:30</span>
-                    </div> -->
+                <div class="header__questions-page" id="timer_container">
+                    <a class="button button_exit" id="exit_button" href="#categories"></a>
+
                 </div>
             </div>
         </div>
     </header>
+
+    <audio id="right_answer_sound">
+        <source src="../src/assets/audio/right.ogg" type="audio/ogg" />
+        <source src="../src/assets/audio/right.mp3" type="audio/mpeg" />
+    </audio>
+
+    <audio id="wrong_answer_sound">
+        <source src="../src/assets/audio/wrong.ogg" type="audio/ogg" />
+        <source src="../src/assets/audio/wrong.mp3" type="audio/mpeg" />
+    </audio>
+
+    <audio id="result_sound">
+        <source src="../src/assets/audio/result.ogg" type="audio/ogg" />
+        <source src="../src/assets/audio/result.mp3" type="audio/mpeg" />
+    </audio>
 
     <main class="main">
         <div class="container">

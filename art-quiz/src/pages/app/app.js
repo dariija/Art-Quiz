@@ -4,8 +4,8 @@ import SettingsPage from '../settings/settings.js'
 import QuestionsPage from '../questions/questions.js'
 import CategoriesPage from '../categories/categories.js'
 import ResultsPage from '../results/results.js'
-
 import {Quiz, AuthorsQuiz, PicturesQuiz} from '../../core/templates/quiz.js'
+import Settings from '../../core/templates/settings';
 
 class App {
     constructor() {
@@ -17,6 +17,7 @@ class App {
             'categories': new CategoriesPage('categories-page'),
             'results': new ResultsPage('results-page'),
         };
+        this.settings = localStorage.getItem('appSettings')? JSON.parse(localStorage.getItem('appSettings')) : new Settings();
         this.quiz;
     }
 
@@ -36,11 +37,24 @@ class App {
             this.enableQuiz();
         };
 
+        if (hash === 'settings') {
+            SettingsPage.enableSettings(this);
+            SettingsPage.checkSettings(this);
+        };
+
         if (hash === 'categories') {
+            this.saveData();
             CategoriesPage.renderCategories(this.quiz);
         };
 
         if (hash === 'questions') {
+            QuestionsPage.enableButtons(this.quiz);
+            if (this.settings.timer) {
+                QuestionsPage.renderTimer(this.quiz)
+            };
+            if (this.settings.valueAsNumber) {
+                QuestionsPage.enableAudio(this.quiz)
+            };
             this.quiz.runQuiz();
         }
     }
@@ -53,13 +67,27 @@ class App {
     enableQuiz() {
         const authorQuizButton = document.getElementById('authors_quiz');
         authorQuizButton.addEventListener('click', () => {
-            this.quiz = new AuthorsQuiz();
+            if (localStorage.getItem('authorsQuiz')) {
+                let quiz = JSON.parse(localStorage.getItem('authorsQuiz'));
+                Object.setPrototypeOf(quiz, AuthorsQuiz.prototype);
+                this.quiz = quiz;
+                this.quiz.settings = this.settings;
+            } else this.quiz = new AuthorsQuiz(this.settings);
         });
 
         const picturesQuizButton = document.getElementById('pictures_quiz');
         picturesQuizButton.addEventListener('click', () => {
-            this.quiz = new PicturesQuiz();
+            if (localStorage.getItem('picturesQuiz')) {
+                let quiz = JSON.parse(localStorage.getItem('picturesQuiz'));
+                Object.setPrototypeOf(quiz, PicturesQuiz.prototype);
+                this.quiz = quiz;
+                this.quiz.settings = this.settings;
+            } else this.quiz = new PicturesQuiz(this.settings);
         });
+    }
+
+    saveData() {
+        localStorage.setItem(`${this.quiz.type}Quiz`, JSON.stringify(this.quiz));
     }
 }
 
