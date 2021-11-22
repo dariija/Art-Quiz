@@ -2,7 +2,6 @@
 
 .pictures-questions-cards {
     margin: auto;
-    /* max-width: 330px; */
 
     display: flex;
     flex-wrap: wrap;
@@ -17,6 +16,8 @@
     
     background-color:#f5bda8;
     border-radius: 20px;
+
+    cursor: pointer;
 }
 
 /* ------------------- Media Queries ------------------------- */
@@ -31,7 +32,6 @@
     .pictures-questions-cards {
         gap: 25px;
     }
-    
 }
 
 @media (min-width: 768px) {

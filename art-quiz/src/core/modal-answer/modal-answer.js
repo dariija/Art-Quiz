@@ -11,13 +11,13 @@ class ModalAnswer {
     }
 
     render() {
-        let c = document.createElement('div');
-        c.classList.add('modal', 'modal_show');
-        c.id = 'modal_window'
-        let b = document.createElement('div')
-        b.classList.add('modal-container');
-        let a = document.createElement('div')
-        a.classList.add('modal-container__content');
+        let modalWindow = document.createElement('div');
+        modalWindow.classList.add('modal', 'modal_show', 'fadeOut');
+        modalWindow.id = 'modal_window'
+        let modalContainer = document.createElement('div')
+        modalContainer.classList.add('modal-container');
+        let modalContent = document.createElement('div')
+        modalContent.classList.add('modal-container__content');
 
         let indicatorClass = this.userAnswer? 'answer-indicator_right' : 'answer-indicator_wrong';
         let template = `
@@ -34,11 +34,10 @@ class ModalAnswer {
         `;
 
         this.container.innerHTML = template;
-        a.append(this.container);
-        b.append(a);
-        c.append(b)
-
-        return c
+        modalContent.append(this.container);
+        modalContainer.append(modalContent);
+        modalWindow.append(modalContainer)
+        return modalWindow
     }
 }
 

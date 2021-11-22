@@ -46,7 +46,6 @@
     width: 200px;
     margin-bottom: 30px;
     
-    /* font-size: 22px; */
     text-align: center;
 }
 
@@ -108,7 +107,6 @@
 
 .picture-description__image {
     width: 100%;
-    /* width: 462px; */
     height: 250px;
     margin-bottom: 30px;
 
@@ -117,7 +115,6 @@
     background-size: cover;
     background-position: 50% 50%;
     border-radius: 20px;
-    /* background-color: rgba(219, 137, 150, 0.61); */
 }
 
 .answer-indicator {
@@ -238,3 +235,4 @@
         margin-bottom: 40px;
     }
 }
+

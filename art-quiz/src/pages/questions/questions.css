@@ -21,13 +21,14 @@
 
 .timer__scale {
     width: 100%;
+    cursor: none;
 }
 
 .timer__time {
     font-size: 14px;
 }
 
-/* ------------------- Categories-page ------------------------- */
+/* ------------------- Questions-page ------------------------- */
 
 .questions-page {
     height: 100%;
@@ -88,7 +89,6 @@
     .pictures-questions-cards {
         gap: 25px;
     }
-    
 }
 
 @media (min-width: 768px) {
@@ -134,7 +134,6 @@
         height: 62px;
     }
     
-
     .authors-questions__image {
         width: 825px;
         height: 428px;
@@ -154,7 +153,6 @@
 @media(min-width: 768px ) and (min-height: 400px) and (max-height: 700px) {
 
     .header__questions-page {
-        /* max-width: 330px; */
         padding: 20px 0;
     }
 
@@ -172,11 +170,6 @@
         width: 155px;
         height: 164px;
     }
-/* 
-    .footer-info {
-        height: 45px;
-    } */
-
 }
 
 
@@ -194,11 +187,6 @@
 }
 
 @media(max-width: 1281px ) and (max-height: 801px ) {
-
-    /* .authors-questions__image {
-        width: 328px;
-        height: 294px;
-    } */
 
     .authors-questions__answers-item {
         width: 158px;

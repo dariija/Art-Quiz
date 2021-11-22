@@ -2,12 +2,10 @@ import Answer from "./answer";
 import dataImages from "../../data-images/images.js";
 
 class Question {
-
     static createQuestions(data, quizType) {
         let questions = {};
         let quizTypeAuthor = (quizType === 'authors')? true : false;
         
-    
         for (let category of Object.values(data)) {
             questions[category.name] = [];
     
@@ -33,7 +31,6 @@ class Question {
                         }
                     }
                 }
-    
                 let question = quizTypeAuthor? new AuthorQuestion(answers) : new PicturesQuestion(answers, category.data[i].author);
                 questions[category.name].push(question);
             }
