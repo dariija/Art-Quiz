@@ -1,34 +1,18 @@
-import dataImages from '../../data-images/images.js';
-import {Question, AuthorQuestion, PicturesQuestion} from './question.js';
+import {Question} from './question.js';
 import AuthorQuestionItem from '../authors-question-item/authors-question-item.js'
 import PicturesQuestionItem from '../pictures-question/pictures-question-item.js';
-import Answer from './answer.js';
 import Category from './category.js';
-import App from '../../pages/app/app.js';
 import ModalAnswer from '../modal-answer/modal-answer.js'
 import Button from '../button/button.js';
 import ModalResult from '../modal-result/modal-result.js';
 import QuestionsPage from '../../pages/questions/questions.js';
-
-function getDataByType(type) {
-    const dataByType = [];
-    if (type === 'authors') {
-        dataImages.forEach((elem, index) => {
-            if (index % 2 === 0) dataByType.push(elem)
-        })
-    } else if (type === 'pictures') {
-        dataImages.forEach((elem, index) => {
-            if (index % 2 === 1) dataByType.push(elem)
-        })
-    };
-    return dataByType
-}
+import Data from './data.js';
 
 class Quiz {
     constructor(settings, type) {
         this.settings = settings;
         this.type = type;
-        this.data = getDataByType(this.type);
+        this.data = Data.getDataByType(this.type);
         this.categories = Category.divideDataByCategories(this.data);
         this.questions = Question.createQuestions(this.categories, this.type);
 
