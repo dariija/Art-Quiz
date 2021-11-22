@@ -11,7 +11,9 @@
     width: 328px;
     height: 294px;
 
-    background-color:#f5bda8;
+    /* background-color:#f5bda8; */
+    background-size: cover;
+    background-position: 50% 50%;
     border-radius: 20px;
 }
 
@@ -62,7 +64,6 @@
     .authors-questions__image {
         width: 825px;
         height: 428px;
-
     }    
 }
 

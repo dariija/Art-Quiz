@@ -77,6 +77,14 @@
     justify-content: space-between;
 }
 
+.time-game-settings__content {
+    font-size: 24px;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
 .time-answer-settings__time-group {
     max-width: 150px;
     margin: auto;

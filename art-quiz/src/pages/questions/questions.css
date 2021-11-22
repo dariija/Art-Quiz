@@ -2,6 +2,12 @@
 
 .header__questions-page {
     padding: 20px 0;
+    width: 100%;
+
+    display: flex;
+    /* justify-content: space-between; */
+    align-items: center;
+    column-gap: 20px;
 }
 
 .timer {
@@ -33,9 +39,10 @@
 }
 
 .questions-page__question {
-    margin-bottom: 40px;
+    margin-bottom: 25px;
 
     font-size: 22px;
+    text-align: center;
 }
 
 
@@ -55,6 +62,10 @@
         font-size: 18px;
     }
 
+    .questions-page__question {
+        margin-bottom: 40px; 
+    }
+    
     .authors-questions__image {
         width: 665px;
         height: 553px;

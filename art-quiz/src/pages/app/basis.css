@@ -137,7 +137,8 @@ a  {
 /* ------------------- Buttons ------------------------- */
 
 .button {
-    padding: 0;
+    /* padding: 0; */
+    padding: 5px;
     /* display: inline-block; */
 
     font-size: 16px;
@@ -215,7 +216,7 @@ a  {
     width: 23px;
     height: 16px;
 
-    background: url('../../assets/svg/volume-mute.svg') no-repeat;
+    background: url('../../assets/svg/volume.svg') no-repeat;
 }
 
 .button_settings {
