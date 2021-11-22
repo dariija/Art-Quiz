@@ -25,7 +25,7 @@ function getDataByType(type) {
 }
 
 class Quiz {
-
+    
     constructor(settings, type) {
         this.settings = settings;
         this.type = type;

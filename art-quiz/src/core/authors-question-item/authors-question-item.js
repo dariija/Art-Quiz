@@ -8,7 +8,7 @@ class AuthorsQuestionItem {
         this.text = question.text;
         this.answers = question.answers;
         this.quiz = quiz;
-        this.cover = `../src/data-images/img/${fullInfo.imageNum}.jpg`;
+        this.cover = `../src/data-images/full/${fullInfo.imageNum}full.jpg`;
     }
 
     render() {
