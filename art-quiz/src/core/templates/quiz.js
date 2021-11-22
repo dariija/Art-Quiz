@@ -25,7 +25,6 @@ function getDataByType(type) {
 }
 
 class Quiz {
-    
     constructor(settings, type) {
         this.settings = settings;
         this.type = type;
@@ -56,14 +55,17 @@ class Quiz {
 
     endQuiz() {
         let sound = document.getElementById('result_sound');
-        if (this.settings.valueAsNumber) sound.play();
+        if (this.settings.value !== '0') sound.play();
 
         let result = this.categories[this.currentCategoryGame].userAnswers.filter( answer => answer).length;
         this.categories[this.currentCategoryGame].results = result;
 
         let container = document.body;
-        let modal = new ModalResult(result).render();
-        container.append(modal);
+        let modalResult = new ModalResult(result).render();
+        container.append(modalResult);
+
+        let modal = document.getElementById('modal_window');
+        setTimeout( () => modal.classList.add('fadeIn'), 500 );
 
         this.currentCategoryGame = '';
         this.currentQuestion = 0;
@@ -71,13 +73,16 @@ class Quiz {
 
     showRightAnswer(userAnswer) {
         let sound = document.getElementById(`${userAnswer? 'right_answer_sound' : 'wrong_answer_sound'}`);
-        if (this.settings.valueAsNumber) sound.play();
+        if (this.settings.value !== '0') sound.play();
 
         let fullAnswer = this.categories[this.currentCategoryGame].data[this.currentQuestion];
         let answer = new ModalAnswer(userAnswer, fullAnswer).render();
-
         let container = document.body;
         container.append(answer);
+
+        let modal = document.getElementById('modal_window');
+        setTimeout( () => modal.classList.add('fadeIn'), 500 );
+
         Button.enableNextQuestion(this);
 
         this.categories[this.currentCategoryGame].userAnswers.push(userAnswer)

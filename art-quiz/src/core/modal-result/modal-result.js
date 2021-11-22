@@ -9,7 +9,7 @@ class ModalResult {
 
     render() {
         let modalWindow = document.createElement('div');
-        modalWindow.classList.add('modal', 'modal_show', 'fadeOut', 'fadeIn');
+        modalWindow.classList.add('modal', 'modal_show', 'fadeOut');
         modalWindow.id = 'modal_window'
         let modalContainer = document.createElement('div')
         modalContainer.classList.add('modal-container');
