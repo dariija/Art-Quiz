@@ -45,6 +45,12 @@ class App {
         if (hash === 'categories') {
             this.saveData();
             CategoriesPage.renderCategories(this.quiz);
+            setTimeout( () => CategoriesPage.showCategories(this.quiz), 1500)
+        };
+
+        if (hash === 'results') {
+            ResultsPage.renderResults(this.quiz);
+            setTimeout( () => ResultsPage.showResults(this.quiz), 1500)
         };
 
         if (hash === 'questions') {
