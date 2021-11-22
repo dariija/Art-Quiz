@@ -35,7 +35,7 @@ class SettingsPage extends Page{
         this.volumeEl = document.getElementById('volume_settings');
 
         this.timerOnEl.addEventListener('change', () => {
-            if (this.timerValueEl.value === '0') this.timerValueEl.value = 20;
+            if (this.timerValueEl.value === '0') this.timerValueEl.value = 5;
         });
 
         this.timerOffEl.addEventListener('change', () => {

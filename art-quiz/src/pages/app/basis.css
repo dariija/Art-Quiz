@@ -35,21 +35,18 @@
 
 body {
     width: 100%;
-    /* width: 100vw; */
     min-height: 100vh;
     margin: 0;
 
-    /* display: flex;
-    flex-direction: column; */
-
     background-color: rgb(0, 0, 0);
-    /* background-color: rgb(206, 16, 63); */
     
     font-family: 'Gilroy', Arial, Helvetica, sans-serif;
     font-size: 16px;
     font-weight: 500;
     font-style: normal;
     color: white;
+
+    transition: 1s ease-in-out;
 }
 
 *,
@@ -100,6 +97,8 @@ a  {
 
     text-decoration: none;
     color: white;
+
+    transition: linear 0.2s;
 }
 
 /* ------------------- Main ------------------------- */
@@ -134,12 +133,22 @@ a  {
     padding: 0 15px;
 }
 
+.fadeOut {
+    visibility: hidden;
+    opacity: 0;
+    transition: visibility linear 0.8s, opacity linear 0.8s;
+}
+
+.fadeIn {
+    visibility: visible;
+    opacity: 1;
+    transition: visibility linear 0.8s, opacity linear 0.8s;
+}
+
 /* ------------------- Buttons ------------------------- */
 
 .button {
-    /* padding: 0; */
     padding: 5px;
-    /* display: inline-block; */
 
     font-size: 16px;
     font-family: 'Gilroy', Arial, Helvetica, sans-serif;
@@ -149,7 +158,7 @@ a  {
     border: none;
 
     cursor: pointer;
-    transition: linear 0.2s;
+    transition: linear 0.5s;
 }
 
 .button_basic {
@@ -224,7 +233,6 @@ a  {
     height: 34px;
 
     background: url('../../assets/svg/carbon_settings.svg') no-repeat;
-    /* vertical-align: middle;  */
 }
 
 .button_settings:hover {
@@ -280,4 +288,28 @@ a  {
 
 .button_score:hover {
     background: url('../../assets/svg/score-button-active.svg') no-repeat;
+}
+
+/* ------------------- Input range ------------------------- */
+
+input[type="range"] { 
+    -webkit-appearance: none;
+    overflow: hidden;
+    height: 7px;
+    cursor: pointer;
+    border-radius: 3px;
+}
+
+::-webkit-slider-runnable-track {
+    background: rgb(255, 255, 255);
+}
+
+::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    width: 12px;
+    height: 10px;
+    background: #fff;
+    box-shadow: -100vw 0 0 100vw #FFBCA2;
+    border: 1px solid #999;
+    border-radius: 5px;
 }

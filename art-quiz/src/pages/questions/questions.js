@@ -22,6 +22,7 @@ class QuestionsPage extends Page {
         let timerRange = document.createElement('input');
         timerRange.id = 'timer_range';
         timerRange.type = 'range';
+        timerRange.readOnly = true;
         timerRange.classList.add('timer__scale');
         timerRange.min = 0;
         timerRange.max = quiz.settings.timer.value;
@@ -70,7 +71,9 @@ class QuestionsPage extends Page {
         let exitButton = document.getElementById('exit_button');
         exitButton.addEventListener('click', () =>{
             if (quiz.settings.timer.enable) {
-                quiz.stopTimer()
+                quiz.stopTimer();
+                quiz.currentQuestion = 0;
+                quiz.currentCategoryGame = '';
             }
         })
     }

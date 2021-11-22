@@ -23,6 +23,11 @@ class CategoriesPage extends Page{
         };
         Category.enableCategoryQuiz(container.children, quiz);
     }
+
+    static showCategories() {
+        let container = document.getElementById('categories_cards');
+        container.classList.add('fadeIn');
+    }
 }
 
 export default CategoriesPage

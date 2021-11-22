@@ -73,6 +73,8 @@
 }
 
 .volume-setting__button-group {
+    margin-top: 15px;
+
     display: flex;
     justify-content: space-between;
 }
