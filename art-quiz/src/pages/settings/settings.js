@@ -13,6 +13,8 @@ class SettingsPage extends Page{
         this.timerMinusEl
         this.timerPlusEl
         this.volumeEl;
+        this.volumeOnEl;
+        this.volumeOffEl;
     }
 
     render() {
@@ -33,6 +35,8 @@ class SettingsPage extends Page{
         this.timerMinusEl = document.getElementById('timer_settings_minus');
         this.timerPlusEl = document.getElementById('timer_settings_plus');
         this.volumeEl = document.getElementById('volume_settings');
+        this.volumeOnEl = document.getElementById('volume_on');
+        this.volumeOffEl = document.getElementById('volume_off');
 
         this.timerOnEl.addEventListener('change', () => {
             if (this.timerValueEl.value === '0') this.timerValueEl.value = 5;
@@ -50,6 +54,14 @@ class SettingsPage extends Page{
         this.timerPlusEl.addEventListener('click', () => {
             this.timerPlusEl.previousElementSibling.stepUp();
             if (this.timerValueEl.value !== '0') this.timerOnEl.checked = true;
+        });
+
+        this.volumeOnEl.addEventListener('click', () => {
+            if(this.volumeEl.value = '0') this.volumeEl.value = '20'
+        });
+
+        this.volumeOffEl.addEventListener('click', () => {
+            this.volumeEl.value = '0';
         });
     }
 
