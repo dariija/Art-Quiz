@@ -30,63 +30,38 @@
     padding: 16px 16px 25px;
 }
 
+/* ------------------------- Modal-end-game ------------------------- */
 
-/* ------------------------- Modal-answer ------------------------- */
-
-.picture-description {
+.modal-end-game {
     display: flex;
     flex-direction: column;
     align-items: center;
-    row-gap: 10px;
+    row-gap: 30px;
 }
 
-.picture-description__image {
-    width: 100%;
-    height: 250px;
-    margin-bottom: 30px;
+.modal-end-game__image {
+    width: 150px;
+    height: 140px;
+    margin-top: 35px;
 
-    position: relative;
-
-    background-size: cover;
-    background-position: 50% 50%;
-    border-radius: 20px;
+    background: url('../../assets/svg/end-game.svg') no-repeat;
+    background-size: 150px 140px;
 }
 
-.answer-indicator {
-    width: 35px;
-    height: 35px;
-
-    position: absolute;
-    left: 20px;
-    bottom: 20px;
-
-    background-repeat: no-repeat;
-    background-size: contain;
+.modal-end-game__text {
+    font-size: 22px;
 }
 
-.answer-indicator_right {
-    background-image: url('../../assets/svg/right-answer.svg');
+.modal-end-game__result {
+    font-size: 48px;
+    font-weight: 700;
 }
 
-.answer-indicator_wrong {
-    background-image: url('../../assets/svg/wrong-answer.svg');
-}
-
-.modal-answer__picture-info {
-    margin-bottom: 25px;
-}
-
-.picture-description__author {
-    font-weight: 400;
-    font-style: italic;
-    font-size: 16px;
-}
-
-.modal-answer__button {
+.modal-end-game__button {
     width: 100%;
     height: 48px;
+    padding: 10px 50px;
 }
-
 
 /* ------------------- Media Queries ------------------------- */
 
@@ -117,22 +92,10 @@
         font-size: 22px;
     }
 
-    .modal-answer__picture-info {
-        margin-bottom: 35px;
-    }
-
     .picture-description__image {
         height: 416px;
     }
 
-    .answer-indicator {
-        width: 60px;
-        height: 60px;
-
-        left: 20px;
-        bottom: 20px;
-    }
-    
     .picture-description__name {
         font-size: 32px;
     }
@@ -140,17 +103,6 @@
     .picture-description__author {
         font-size: 22px;
     }
-
-    .modal-answer__button {
-        height: 62px;
-        font-size: 22px;
-    }
 }
 
-@media(min-width: 1025px) {
-
-    .modal-answer__picture-info {
-        margin-bottom: 40px;
-    }
-}
 

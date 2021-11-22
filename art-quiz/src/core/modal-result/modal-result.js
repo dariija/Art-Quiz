@@ -1,3 +1,5 @@
+import './modal-result.css'
+
 class ModalResult {
     constructor(correctAnswersNum, userAnswers) {
         this.container = document.createElement('div');

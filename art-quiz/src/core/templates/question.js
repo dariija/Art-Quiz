@@ -40,7 +40,7 @@ class Question {
 }
 
 class AuthorQuestion extends Question{
-    constructor(answers, text = 'Who is the author of this picture?') {
+    constructor(answers, text = 'Кто автор данной картины?') {
         super();
         this.text = text;
         this.answers = answers;
@@ -50,7 +50,7 @@ class AuthorQuestion extends Question{
 class PicturesQuestion extends Question{
     constructor(answers, author) {
         super();
-        this.text = `Which is ${author} picture?`;
+        this.text = `Какую из этих картин написал ${author}?`;
         this.answers = answers;
     }
 }
