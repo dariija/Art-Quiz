@@ -68,6 +68,9 @@ class App {
     run() {
         this.renderPage('start');
         this.enableRootChange();
+        window.addEventListener('load', () => {
+            window.location.hash = '#start';
+        })
     }
 
     enableQuiz() {
