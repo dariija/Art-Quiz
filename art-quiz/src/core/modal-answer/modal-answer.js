@@ -7,7 +7,7 @@ class ModalAnswer {
 
         this.rightAnswer = rightAnswer;
         this.userAnswer = userAnswer;
-        this.cover = `./src/data-images/img/${rightAnswer.imageNum}.jpg`;
+        this.cover = require(`../../data-images/img/${rightAnswer.imageNum}.jpg`);
     }
 
     render() {
