@@ -25,7 +25,7 @@ module.exports = {
           use: ['style-loader', 'css-loader']
         },
         {
-          test: /\.(png|svg|jpeg|gif)$/,
+          test: /\.(png|svg|jpeg|jpg|gif|mp3|ogg)$/,
           type: 'asset/resource'
         },
         {
@@ -33,8 +33,8 @@ module.exports = {
           type: 'asset/resource'
         },
         {
-          test: /\.m.html$/,
-          type: 'asset/source'
+          test: /\.html$/,
+          use: 'html-loader'
         }
     ]
   },
