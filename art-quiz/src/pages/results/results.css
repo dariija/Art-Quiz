@@ -1,0 +1,137 @@
+/* ------------------- Header ------------------------- */
+
+.header__results-page {
+    padding: 25px 0;
+
+    display: flex;
+    justify-content: space-between;
+    column-gap: 20px;
+}
+
+.navigation__link_active {
+    color: #FFBCA2;
+}
+
+.navigation__link:active {
+    color: #FFBCA2;
+}
+
+.navigation__link:hover {
+    color: #FFBCA2;
+}
+
+/* ------------------- Categories-page ------------------------- */
+.results-page {
+    height: 100%;
+    min-height: 100vh;
+    padding-top: 112px;
+    padding-bottom: 80px;
+}
+
+.results-page__content {
+    padding: 20px 0;
+    height: 100%;
+}
+
+.results-page__header {
+    margin-bottom: 50px;
+
+    font-size: 24px;
+}
+
+/* ------------------- Footer ------------------------- */
+.footer_fixed {
+    position: fixed;
+    bottom: 0;
+}
+
+.footer-results {
+    width: 100%;
+    display: none;
+
+    background-color: rgb(0, 0, 0);
+    filter: drop-shadow(0px -10px 50px rgb(0, 0, 0));
+}
+
+
+/* ------------------- Media Queries ------------------------- */
+
+@media (min-width: 521px) {
+
+    .results-page {
+        padding-top: 142px;
+        padding-bottom: 80px;
+    }
+
+    .container {
+        padding: 0 35px;
+    }
+
+    .header__results-page {
+        padding: 40px 0;
+
+        align-items: center;
+    }
+
+    .footer-info {
+        height: 80px;
+
+        justify-content:flex-end;
+        gap: 0 60px;
+    }
+
+    .footer-info__rsschool-logo {
+        margin-right: auto;
+    }
+}
+
+@media (min-width: 768px) {
+
+    .header__navigation {
+        display: flex;
+    }
+
+    .footer-results {
+        display: block;
+    }
+
+    .navigation-bar {
+        display: none;
+    }
+}
+
+@media(min-width: 1025px) {
+
+    .container {
+        padding: 0 40px;
+    }
+
+    .header {
+        font-size: 22px;
+    }
+
+    .header__navigation {
+        margin-right: auto;
+    }
+
+    .header__results-page {
+        column-gap: 120px;
+    }
+
+    .header__results-page {
+        padding: 30px 0;
+    }
+
+    .results-page {
+        padding-top: 122px;
+        padding-bottom: 80px;
+    }
+
+    .results-page__content {
+        padding-top: 100px;
+    }
+
+    .results-page__header {
+        display: none;
+    }
+}

@@ -1,0 +1,37 @@
+.category-card-item__header{
+    margin-bottom: 10px;
+
+    display: flex;
+    justify-content: space-between;
+}
+
+.categories-cards {
+    max-width: 1480px;
+    margin: auto;
+
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+
+    gap: 20px;
+}
+
+.category-card-item__image {
+    width: 155px;
+    height: 164px;
+    
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: 50% 50%;
+    border-radius: 20px;
+}
+
+/* ------------------- Media Queries ------------------------- */
+
+@media (min-width: 521px) {
+
+    .category-card-item__image {
+        width: 195px;
+        height: 206px;
+    }
+}

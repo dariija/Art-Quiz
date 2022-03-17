@@ -1,0 +1,156 @@
+.modal{
+    width: 100%;
+    height: 100%;
+
+    position: fixed;
+    top: 0;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    font-size: 22px;
+    color: black;
+
+    background-color: rgba(0, 0, 0, 0.747);
+}
+
+.modal-container {
+    width: 100%;
+    max-width: 328px;
+    padding: 10px;
+
+    background-color: rgb(253, 253, 253);
+    border-radius: 20px;
+
+    box-shadow: 0px 0px 30px 0px rgba(49, 53, 56, 0.93);
+}
+
+.modal-container__content {
+    padding: 16px 16px 25px;
+}
+
+
+/* ------------------------- Modal-answer ------------------------- */
+
+.picture-description {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    row-gap: 10px;
+}
+
+.picture-description__image {
+    width: 100%;
+    height: 250px;
+    margin-bottom: 30px;
+
+    position: relative;
+
+    background-size: cover;
+    background-position: 50% 50%;
+    border-radius: 20px;
+}
+
+.answer-indicator {
+    width: 35px;
+    height: 35px;
+
+    position: absolute;
+    left: 20px;
+    bottom: 20px;
+
+    background-repeat: no-repeat;
+    background-size: contain;
+}
+
+.answer-indicator_right {
+    background-image: url('../../assets/svg/right-answer.svg');
+}
+
+.answer-indicator_wrong {
+    background-image: url('../../assets/svg/wrong-answer.svg');
+}
+
+.modal-answer__picture-info {
+    margin-bottom: 25px;
+}
+
+.picture-description__author {
+    font-weight: 400;
+    font-style: italic;
+    font-size: 16px;
+}
+
+.modal-answer__button {
+    width: 100%;
+    height: 48px;
+}
+
+
+/* ------------------- Media Queries ------------------------- */
+
+@media (min-width: 768px) {
+    .modal-container {
+        max-width: 530px;
+    }
+
+    .modal-end-game__image {
+        width: 166px;
+        height: 160px;
+
+        background-size: 166px 160px;
+    }
+
+    .modal-end-game__text {
+        font-size: 42px;
+        font-weight: 600;
+    }
+
+    .modal-end-game__result {
+        margin-bottom: 30px;
+        font-size: 72px;
+    }
+
+    .modal-end-game__button {
+        height: 62px;
+        font-size: 22px;
+    }
+
+    .modal-answer__picture-info {
+        margin-bottom: 35px;
+    }
+
+    .picture-description__image {
+        height: 416px;
+    }
+
+    .answer-indicator {
+        width: 60px;
+        height: 60px;
+
+        left: 20px;
+        bottom: 20px;
+    }
+    
+    .picture-description__name {
+        font-size: 32px;
+    }
+
+    .picture-description__author {
+        font-size: 22px;
+    }
+
+    .modal-answer__button {
+        height: 62px;
+        font-size: 22px;
+    }
+}
+
+@media(min-width: 1025px) {
+
+    .modal-answer__picture-info {
+        margin-bottom: 40px;
+    }
+}
+
